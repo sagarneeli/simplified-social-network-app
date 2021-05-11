@@ -20,11 +20,8 @@ You can use any language or framework/library of your choice.
 
 ## Submission:
 
-We utilize Github and [pull requests](https://help.github.com/articles/creating-a-pull-request/) for collaborating on code. Create a new [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) for your submission. While working on the exercise feel free to commit as much as you like.
+Create a new [branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) and add your [pull requests](https://help.github.com/articles/creating-a-pull-request/) for your submission. While working on the exercise feel free to commit as much as you like.
 
-You have 7 days from the time that you receive the take-home to submit. Please do not spend more than three or four hours on the project and feel free to submit your solution early if finished ahead of the 7-day deadline.
 Please make sure to document how to run your exercise as well as any other information or consideration you think is relevant.
 
-When you are ready to submit, open a pull request against the master branch. In your pull request, make sure to specify how to run your exercise as well as any other information you think is relevant.
-
-If your submission passes review, your next session will be a review of the code you submit for this exercise.
+When you are ready to submit, open a pull request against the main branch. In your pull request, make sure to specify how to run your exercise as well as any other information you think is relevant.
