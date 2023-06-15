@@ -1,11 +1,14 @@
+import os
 from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token
 from models.user import User, db
 from models.post import Post
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://<db_user>:<db_password>@<db_host>/<db_name>'
-app.config['JWT_SECRET_KEY'] = '<your_jwt_secret_key>'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
 db.init_app(app)
 jwt = JWTManager(app)
 
