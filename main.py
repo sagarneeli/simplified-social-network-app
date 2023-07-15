@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from database import SessionLocal, engine
 from models import User, Post, Follow, generate_post_id, Base
+from config import settings
 
 Base.metadata.create_all(bind=engine)
 
@@ -43,7 +44,7 @@ def compose(request: ComposeRequest, db: Session = Depends(get_db)):
     return {"message": "Post created successfully."}
 
 
-@app.get("/getFeed/{userId}")
+@app.get("/getFeed/{userId}", status_code=status.HTTP_200_OK)
 def get_feed(userId: str, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.userId == userId).first()
     if not user:
@@ -108,7 +109,7 @@ def unfollow(request: FollowRequest, db: Session = Depends(get_db)):
 
 @app.get("/", status_code=status.HTTP_200_OK)
 def root():
-    return {"message": "Hello World"}
+    return {"message": settings.app_name}
 
 
 @app.exception_handler(HTTPException)

@@ -3,3 +3,6 @@ psycopg2-binary
 sqlalchemy
 databases
 uvicorn
+pydantic
+pydantic-settings
+python-dotenv
